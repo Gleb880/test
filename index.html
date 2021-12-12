@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Расчет кредитования</title>
+		<link rel="stylesheet" href="./css/main.css" />
+		<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,700&display=swap&subset=cyrillic-ext" rel="stylesheet" />
+	</head>
+
+	<body>
+    <div class="main-calculator">
+        <h1 class="calculator-title">Рассчитай свой кредит под оборудование</h1>
+        <div class="calculator-content">
+            <div class="calculator-content-body">
+                <div class="calculator-content-body-left">
+                    <div class="calculator-content-body-left-inputs">
+                        <div class="input-wrapper">
+                            <div class="title-desc">Первоначальный взнос</div>
+                            <div class="input">
+                                <input type="number" id="an-initial-fee" value="0">
+                            </div>
+                            <div class="input">
+                                <input type="range" min="1000" step="1000" max="495000" id="an-initial-fee-range" value="0" class="input-range">
+                            </div>
+                            <div class="input-values-calc">
+                                <div class="min-value">
+                                    <p>Меньше</p>
+                                </div>
+                                <div class="max-value">
+                                    <p>Больше</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="input-wrapper">
+                            <div class="title-desc">Срок кредита</div>
+                            <div class="input">
+                                <input type="number" id="credit-term" value="0">
+                            </div>
+                            <div class="input">
+                                <input type="range"  min="1" max="36" id="credit-term-range" value="0" class="input-range">
+                            </div>
+                            <div class="input-values-calc">
+                                <div class="min-value">
+                                    <p>1 мес</p>
+                                </div>
+                                <div class="max-value">
+                                    <p>36 мес</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="calculator-content-body-right">
+                    <div class="final-results-wrapper">
+                        <div class="final-result-item">
+                            <div class="title-desc">Сумма кредита:</div>
+                            <div class="value" id="amount-of-credit">0<span>грн</span></div>
+                        </div>
+                        <div class="final-result-item">
+                            <div class="title-desc">Ежемесячный платеж:</div>
+                            <div class="value" id="monthly-payment">0<span>грн</span></div>
+                        </div>
+                        <div class="final-result-item">
+                            <div class="title-desc">Рекомендуемый доход:</div>
+                            <div class="value" id="recommended-income">0<span>грн</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calculator-btn">
+                <button type="submit">Получить</button>
+            </div>
+        </div>
+    </div> 
+        
+		<script src="./js/main.js"></script>
+	</body>
+</html>
