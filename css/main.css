@@ -145,10 +145,11 @@ input[type='number'] {
 
 
 input[type='range'] {
-    background-color: green;
+    -webkit-appearance: none; 
     border-radius: 100px;
     height: 4px;
     width: 100%;
+
     margin-top: 20px;
 }
 
@@ -159,6 +160,20 @@ input[type=range] {
  
 input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
+  width: 30px;
+  height: 30px;
+  background-color:rgb(38, 96, 196);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.input-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 30px;
+    height: 30px;
+    background-color:rgb(38, 96, 196);
+    border-radius: 50%;
+    cursor: pointer;
 }
  
 input[type=range]:focus {
@@ -169,16 +184,17 @@ input[type='range'] {
     width: 100%;
     -webkit-appearance: none;
     background-color: #F9FAFC;
+    outline: none;
 }
 
 input[type='range']::-webkit-slider-thumb {
     -webkit-appearance: none;
     cursor: ew-resize;
+    outline: none;
     width: 18px;
     height: 18px;
     border-radius: 50%;
     background: #599FF1;
-    margin-top: -25px;
 }
 
 
@@ -200,7 +216,8 @@ input::-webkit-inner-spin-button {
     font-size: 18px;
     line-height: 22px;
     color: #071124;
-    padding: 0;
+    padding-left: 10px;
+    max-width: 490px;
 }
 
 .input-wrapper .title-desc {
@@ -622,7 +639,7 @@ input::-webkit-inner-spin-button {
     }
 
     .input-wrapper input[type="number"] {
-        padding: 0;
+        max-width: 339px;
     }
 }
 
@@ -631,6 +648,7 @@ input::-webkit-inner-spin-button {
     .calculator-content {
         width: 300px;
     }
+
 }
 
 @media screen and (max-width:380px) {
